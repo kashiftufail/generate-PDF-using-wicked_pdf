@@ -1,0 +1,32 @@
+This Application Generates PDF with using wicked_pdf gem and wkhtmltopdf library.
+
+Steps
+
+1. Download and just give command "bundle install" for installing all gems in Gemfile.
+
+2.Install wkhtmltopdf library by using these commands
+
+
+   First, installing dependencies
+
+   sudo aptitude install openssl build-essential xorg libssl-dev
+
+   for 64-bit OS
+
+   wget http://wkhtmltopdf.googlecode.com/files/wkhtmltopdf-0.9.2-static-amd64.tar.bz2
+
+   tar xvjf wkhtmltopdf-0.9.2-static-amd64.tar.bz2
+
+   chown root:root wkhtmltopdf-amd64
+
+   mv wkhtmltopdf-amd64 /usr/bin/wkhtmltopdf
+
+3.Create Database and run migration using these commands
+
+   rake db:create
+   rake db:migrate
+
+4. create posts and generate PDF.
+
+
+

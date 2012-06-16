@@ -1,0 +1,67 @@
+<head>
+  <style type="text/css">
+      @media all {
+          body {
+              background-color: white;
+              margin: 1em;
+              font-size: 10pt;
+          }
+
+          div.body {
+              width: 90%;
+          }
+
+          @page :first {
+
+      @bottom-center { content: element(footer, first); }
+      }
+
+      @page {
+
+      @bottom-center { content: element(footer, first); }
+          }
+
+      h2 {
+          margin-top: 1em;
+      }
+
+      .break {
+          page-break-before: always
+      }
+
+          }
+  </style>
+</head>
+<h1>Listing Posts</h1>
+
+
+
+
+<div class="body">
+  <table width="100%" cellpadding="4" cellspacing="0">
+    <tr>
+      <td style="border:1px solid #000;"><strong>Title</strong></td>
+      <td style="border:1px solid #000; border-left: none;"><strong>User</strong></td>
+      <td style="border:1px solid #000; border-left: none;"><strong>Date</strong></td>
+      <td style="border:1px solid #000; border-left: none;"><strong>Description</strong></td>
+    </tr>
+    <% unless @posts.blank? %>
+        <% @posts.each do |post| %>
+            <tr>
+              <td style="border:1px solid #000;border-top: none;"><%=post.title  %></td>
+              <td style="border:1px solid #000; border-left: none;border-top: none;"><%= post.user.email unless post.user.blank? %></td>
+              <td style="border:1px solid #000; border-left: none;border-top: none;"><%= post.created_at.strftime("%m/%d/%Y") %></td>
+              <td style="border:1px solid #000; border-left: none;border-top: none;"><%= post.description %></td>
+            </tr>
+        <% end %>
+    <% end %>
+  </table>
+
+</div>
+
+
+
+
+
+
+
