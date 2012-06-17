@@ -7,7 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<div class="notice"><%=notice%></div>
+<div class="alert"><%=alert%></div>
+<div class="login" style="float: right;background: aqua;margin-right: 80px;">
+<%if user_signed_in?%>
+Welcome <%=@user.email%>|<%=link_to "Logout" ,"/sign_out"%>
+<%end%>
+  </div>
 <%= yield %>
 
 </body>
