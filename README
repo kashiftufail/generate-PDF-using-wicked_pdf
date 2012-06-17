@@ -21,6 +21,14 @@ Steps
 
    mv wkhtmltopdf-amd64 /usr/bin/wkhtmltopdf
 
+    for 32-bit OS
+
+        $ wget http://wkhtmltopdf.googlecode.com/files/wkhtmltopdf-0.9.9-static-i386.tar.bz2
+    	$ tar xvjf wkhtmltopdf-0.9.9-static-i386.tar.bz2
+    	$ chown root:root wkhtmltopdf-i386
+    	$ mv wkhtmltopdf-i386 /usr/bin/wkhtmltopdf
+
+
 3.Create Database and run migration using these commands
 
    rake db:create
