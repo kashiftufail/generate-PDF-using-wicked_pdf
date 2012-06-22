@@ -5,7 +5,7 @@ This Application Generates PDF with using wicked_pdf gem and wkhtmltopdf library
 
 == Getting Started
 
-1. Download and just give command "bundle install" for installing all gems in Gemfile.
+1. Download it and just give command "bundle install" for installing all gems in Gemfile.
 
 2.Install wkhtmltopdf library by using these commands
 
